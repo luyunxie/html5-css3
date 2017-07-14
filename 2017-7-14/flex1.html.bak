@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+     <head>
+	      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+		  <title>flex弹性盒子</title>
+		  <meta name="keywords" content=""/>
+		  <meta name="description" content=""/>
+
+		  <meta name="author" content="LuYun"/>
+
+		  <style type="text/css">
+		       /*
+			      display:-webkit-box (旧版本，稳定性好);
+				  display:-webkit-flex flex(新标准);
+				    -webkit-box-orient子元素排列方向 horizontal | vertical | inline-axis | block-axis | inherit，其中默认值是inline-axis，即横向排列
+					-webkit-box-flex 子元素之间比例，仅作一个系数
+					-webkit-box-direction 子元素排列顺序 normal | reverse | inherit，其中默认值是normal
+					-webkit-box-flex-group 以组为单位的流体系数
+					-webkit-box-ordinal-group 以组为单位的子元素排列方向
+					-webkit-box-lines 子元素是否换行，类似word-wrap和word-break的作用
+					-webkit-box-align 子元素垂直方向的对其方式  start | end | center | baseline | stretch(默认值)
+					-webkit-box-pack 子元素水平方向的对其方式 statr end center justify;
+			   */
+			   /*注意
+			           当-webkit-box-orient 改变时对齐方式也将随之改变
+					   例如：当-webkit-box-orient:vertical;此时-webkit-box-pack指垂直方向的对齐
+			   */
+		       *{margin:0;padding:0;}
+
+		       div ul{width:100%;height:200px;border:1px solid red;display:-webkit-box;
+			       -webkit-box-pack:justify;
+				   -webkit-box-direction:reverse;
+				   /*-webkit-box-orient:vertical;*/
+				   -webkit-box-align:end;
+			   }
+
+			   div ul li{list-style:none;height:30px;text-align:center;}
+			   ul li:nth-child(1){widht:100px;background:red;-webkit-box-flex:1;}
+			   ul li:nth-child(2){background:yellow;-webkit-box-flex:1;}
+			   ul li:nth-child(3){background:blue;-webkit-box-flex:1;}
+			   ul li:nth-child(4){background:green;-webkit-box-flex:1;}
+			   ul li:nth-child(5){background:pink;-webkit-box-flex:1;}
+		  </style>
+	 </head>
+	 <body>
+	       <div>
+		        <ul>
+				    <li>1</li>
+				    <li>2</li>
+				    <li>3</li>
+				    <li>4</li>
+				    <li>5</li>
+				</ul>
+		   </div>
+	 </body>
+</html>

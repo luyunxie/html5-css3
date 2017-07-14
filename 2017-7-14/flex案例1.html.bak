@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+	 <title>flex实例1</title>
+	 <meta name="keywords" content=""/>
+	 <meta name="description" content=""/>
+	 <meta name="author" content="luyun"/>
+
+	 <style type="text/css">
+	      *{margin:0;padding:0;}
+		  body{background:rgba(0,0,0,.1);}
+
+		  .main{width:300px;height:200px;border-radius:4px;background:#fff;margin:20px auto;
+		        display:-webkit-box;
+				display:flex;
+				-webkit-box-orient:vertical;
+				flex-direction:column;
+
+		  }
+
+		  .main .section{width:100%;
+		       -webkit-box-flex:1;
+			   -moz-box-flex:1;
+			   box-flex:1;
+			   flex:1;
+			   display:flex;
+		  }
+
+		  .text{display:flex;
+		      flex-direction:column;
+			  justify-content:center;
+			  align-items:first-start;
+		  }
+		  .text span:nth-child(1){font-size:20px;font-weight:bold;}
+
+		  .main ul{width:100%;
+		      -webkit-box-flex:1;
+			  -moz-box-flex:1;
+			  box-flex:1;
+			  height:55px;
+			  display:flex;
+		  }
+
+		  .main ul li{list-style:none;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+		  .main ul li:nth-child(1){background:green;flex:1;}
+		  .main ul li:nth-child(2){background:yellow;flex:1;}
+		  .main ul li:nth-child(3){background:pink;flex:1;}
+		  .main ul li span{width:20px;height:20px;margin-top:10px;background:rgba(0,0,0,.4);}
+		  .main ul li em{font-style:normal;flex:1;}
+
+		  .img{width:120px;display:flex;justify-content:center;align-items:center;}
+		  .img img{width:80px;height:80px;border-radius:50%;}
+		  .text{flex:1;}
+	 </style>
+</head>
+<body>
+      <div class="main">
+	       <div class="section">
+		        <div class="img"><img src="imgs/A74.jpg"/></div>
+				<p class="text"><span>爱上你</span><span>卡卡西</span></p>
+		   </div>
+		   <ul class="list">
+		        <li><span></span><em>123</em></li>
+				<li><span></span><em>543</em></li>
+				<li><span></span><em>65</em></li>
+		   </ul>
+	  </div>
+</body>
+</html>

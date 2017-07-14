@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+     <head>
+	      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+		  <title>日历时间</title>
+		  <meta name="keywords" content=""/>
+		  <meta name="description" content=""/>
+
+		  <style type="text/css">
+		       .time:after{content:"";display:block;clear:both;}
+		       .time div{width:140px;height:140px;border:1px solid #9FA2AD;background:-webkit-linear-gradient(bottom,rgb(238,239,241) 0,rgba(194,197,209,.9) 50%,rgb(211,213,222) 50%,rgb(225,227,232) 100%);float:left;margin-left:30px;position:relative;border-radius:6px;}
+
+			   .time div:before{content:"";display:block;width:140px;border-top:1px solid #9FA2AD;position:absolute;top:50%;}
+
+			   span{display:block;width:140px;height:20px;border:1px solid #9FA2AD;border-radius:0 0 6px 6px;position:absolute;}
+			   div span:nth-child(1){bottom:-3px;left:-1px;z-index:-1;}
+			   div span:nth-child(2){bottom:-6px;left:-1px;z-index:-2;}
+
+			   div strong{font-family:"aril";position:absolute;left:15px;font-size:100px;line-height:140px;}
+		  </style>
+	 </head>
+	 <body>
+	       <div class="time">
+		       <div>
+			        <span></span>
+					<span></span>
+					<strong id="h"></strong>
+			   </div>
+			   <div>
+			        <span></span>
+					<span></span>
+					<strong id="m"></strong>
+			   </div>
+			   <div>
+			        <span></span>
+					<span></span>
+					<strong id="s"></strong>
+			    </div>
+		   </div>
+
+		   <script>
+		         function timer(){
+				     var h = document.getElementById("h");
+					 var m = document.getElementById("m");
+					 var s = document.getElementById("s");
+					 var da = new Date();
+					 h.innerHTML = da.getHours();
+					 m.innerHTML = da.getMinutes();
+					 s.innerHTML = da.getSeconds();
+				 }
+		         setInterval(timer,1000);
+		   </script>
+	 </body>
+</html>

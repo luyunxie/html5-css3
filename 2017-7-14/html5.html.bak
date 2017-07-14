@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+      <meta http-equiv="Content-Type" content="text/html;charset=uft-8"/>
+
+	  <title>HTML5学习</title>
+
+	  <style type="text/css">
+	       *{margin:0;padding:0;}
+		   input{width:200px;height:30px;border-radius:6px;border:2px solid red;outline:none;margin-bottom:10px;}
+
+		   .gradient{width:600px;
+		       height:60px;
+			   
+		   }
+		   .gradient1{
+			   background:repeating-linear-gradient(45deg,red 0,red 10px,yellow 10px,yellow 20px);
+		   }
+		   .gradient2{
+			   background:-webkit-radial-gradient(circle,red,yellow);
+		   }
+	  </style>
+</head>
+<body>
+      <p>input中新增加的类型</p>
+	  datalist:<input type="text" list="mylist"/>
+	  <datalist id="mylist">
+	        <option value="2">2</option>
+			<option value="3">3</option>
+	  </datalist>
+	  date：<input type="date"/></br>
+	  number：<input type="number" min="3" max="7" step="2"/><br/>
+	  range：<input type="range" min="2" max="8" step="2" value="6"/><br/>
+	  search：<input type="search"/><br/>
+	  URL：<input type="url" /><br/>
+	  tel：<input type="tel"/><br/>
+	  <p>input中新增加的属性：autofocus,autocomplete(on/off),pattern
+	  <br/>ios专用：autocapitalize(on/off)，autocorrect(on/off)，
+	  </p>
+	  <p>新的可用选择器：
+	        a>b 第一层子元素</br>
+			a+b 选择元素紧邻的元素<br/>
+			a~b 匹配某个元素后面的所有兄弟
+	  </p>
+	  <p>选择器：
+	        ::first-letter ::first-line ::selection(文本选择时的样式)  :target
+	  </p>
+	  <div class="gradient gradient1"></div>
+	  <div class="gradient gradient2"></div>
+</body>
+</html>

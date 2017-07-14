@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+     <head>
+	       <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+		   <title>video和audio</title>
+		   <meta name="" content=""/>
+		   <meta name="" content=""/>
+
+		   <style type="text/css">
+		        *{margin:0;padding:0;}
+
+				div.audio{width:300px;margin:20px auto;border-radius:3px;box-shadow:2px 2px 0px #FFFF66;}
+				div.video{width:400px;height:200px;margin:20px auto 0px;overflow:hidden;}
+				
+
+				button{margin-right:10px;margin-bottom:10px;}
+		   </style>
+	 </head>
+	 <body>
+	       <!--audio的属性 controls autoplay muted loop preload-->
+	       <div class="audio">
+		        <audio controls>
+				      <source src="files/audio/tq.mp3" type="audio/mpeg"/>
+					  <source src="files/audio/tq.ogg" type="audio/ogg"/>
+					  <source src="files/audio/tq.wav" type="audio/wav"/>
+				</audio>
+		   </div>
+		   <div class="video">
+		        <button>播放/停止</button>
+				<button>放大</button>
+				<button>缩小</button>
+		        <video class="myvideo" controls width="320">
+				    <source src="files/video/mov_bbb.mp4" type="video/mp4"/>
+					<source src="files/video/mov_bbb.webm" type="video/webm"/>
+					<source src="files/video/mov_bbb.ogg" type="video/ogg"/>
+				</video>
+		   </div>
+
+		   <script>
+		        var myvideo = document.getElementsByClassName("myvideo")[0];
+				var btn1 = document.getElementsByTagName("button")[0];
+				var btn2 = document.getElementsByTagName("button")[1];
+				var btn3 = document.getElementsByTagName("button")[2];
+
+				btn1.onclick = function(){
+				     if(myvideo.paused){
+					    myvideo.play();
+					 }
+					 else{
+					    myvideo.pause();
+					 }
+				}
+				btn2.onclick = function(){
+				     var wid = myvideo.width;
+					 alert(wid);
+					 var b = 200;
+					 wid += b ;
+					 myvideo.width = wid;
+				}
+				btn3.onclick = function(){
+				    myvideo.width = 320;
+				}
+		   </script>
+	 </body>
+</html>

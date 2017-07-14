@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+     <head>
+	       <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+		   <title>flex2</title>
+
+		   <meta name="keywords" content=""/>
+		   <meta name="description" content=""/>
+		   <meta name="author" content=""/>
+
+		   
+		   <style type="text/css">
+		   /*
+		     当display为flex，且flex值为1时，各个元素的宽度平均分配，并不受某一元素具体宽度的影响
+
+			 -webkit-flex-direction （排列方式 - 决定主轴的方向）
+                row(默认) | row-reverse | column | column-reverse
+
+				为复杂布局而生
+                    -webkit-flex-shrink
+                    缩小比例
+                        此时剩余空间是不足时都将等比例缩小
+                        0 表示不参加收缩比例
+                        若没写该属性，则为1
+
+                    -webkit-flex-grow
+                        扩展比率
+                        剩余空间是正值的时，伸缩项目相对于伸缩容器里其他伸缩项目能分配到空间比例
+                            若没写该属性，则为0
+                            0代表不参与扩展
+
+					-webkit-flex-wrap:
+					nowrap | wrap | wrap-reverse
+					单行 | 换行(宽度不够自动换行) | 换行并反转
+
+				justify-content（水平对齐方式）
+                flex-start | flex-end | center | space-between | space-around;
+                左对齐 | 右对齐 | 居中对齐 | 两端对齐(之间的间隔相等) | 每个项目两侧的间隔相等
+
+                align-items（垂直对齐方式）
+                flex-start | flex-end | center | baseline | stretch
+                起点对齐 | 终点对齐 | 中点对齐 | 基线对齐 | 默认值(未设置高度或设为auto，将占满整个容器的高度)
+
+                align-content （多行对齐方式）
+                注：需要多行才行
+                多根轴线的对齐方式
+                flex-start | flex-end | center | space-between | space-around | stretch
+                左对齐 | 右对齐 | 居中对齐 | 两端对齐(之间的间隔相等) | 每个项目两侧的间隔相等 | 轴线占满整个交叉轴
+
+                align-self
+                允许单个项目有与其他项目不一样的对齐方式
+                auto | flex-start | flex-end | center | baseline | stretch
+                该属性可能取6个值，除了auto，其他都与align-items属性完全一致。
+                可覆盖align-items属性
+                默认值auto，表示继承父级元素的align-items，如果没有父级，则则等同于stretch
+
+
+                 当这两个属性遇到了
+                    flex-direction: column / column-reverse  整个顺序就都变了。
+				
+				flex-basis
+                    在分配空间之前，也已经分得到空间
+                       （最小宽度）
+		   */
+		        *{margin:0;padding:0;}
+
+				div ul{width:100%;height:400px;border:1px solid red;
+				   display:flex;
+				   /*-webkit-flex-direction:column;*/
+				   }
+
+				ul li{text-align:center;line-height:30px;height:30px;list-style:none;}
+
+			   ul li:nth-child(1){width:500px;background:red;flex:1;}
+			   ul li:nth-child(2){background:yellow;flex:1;}
+			   ul li:nth-child(3){width:200px;background:blue;}
+			   ul li:nth-child(4){background:green;}
+			   ul li:nth-child(5){background:pink;flex:1;}
+		   </style>
+	 </head>
+	 <body>
+	       <div>
+		        <ul>
+				    <li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</ul>
+		   </div>
+	 </body>
+</html>
