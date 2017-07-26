@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+header p.b_header{
+	display:block;
+
+	}
+
+header .a_header{
+	height:350px;
+	background:url(../imgs/active_ipad.gif) no-repeat;
+	background-size:cover;
+	}
+
+main .a_main{
+	width:100%;
+	height:250px;
+	margin-bottom:40px;
+	}
+main .a_main img{
+	width:100%;
+	height:250px;
+	}
+
+main .a_main img{
+	width:100%;
+	height:250px;
+	min-width:550px;
+	}
+	
+main .alist_main li{
+	margin-bottom:24px;
+	width:336px;
+	height:382px;
+	float:left;
+	}
+main .alist_main li:nth-child(2n+1){
+	margin-left:40px;
+	margin-right:8px;
+	}
+main .alist_main a, main .alist_main img{
+	width:100%;
+	height:100%
+	}
+main .f_main li{
+	width:100%;
+	height:250px;
+	}
+main .f_main li img{
+	width:100%;
+	height:250px;
+	}

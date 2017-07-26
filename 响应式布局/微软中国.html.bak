@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+     <head>
+	       <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+		   <title></title>
+		   <meta name="keywords" content=""/>
+		   <meta name="description" content=""/>
+
+		   <link rel="stylesheet" href="css/reset.css" type="text/css"/>
+		   <link rel="stylesheet" href="css/moblie.css" type="text/css"/>
+		   <link rel="stylesheet" href="css/ipad.css" type="text/css" media="(min-width:770px)"/>
+
+		   <style type="text/css">
+		       
+		   </style>
+	 </head>
+	 <body>
+	       <header>
+		         <p>微软开学季大促，单品优惠最高超2,000元<a href="#">立抢优惠></a></p>
+		   </header>
+	 </body>
+</html>

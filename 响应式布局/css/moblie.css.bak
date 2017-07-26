@@ -1,0 +1,19 @@
+@ charset "utf-8";
+
+header{
+    width:397px;
+	height:33px;
+	background:#002050;
+}
+header p{
+    font-size:20px;
+	line-height:34px;
+	text-align:center;
+	color:#fff;
+	background:#002050;
+}
+header p a{
+    color:#fff;
+	margin-left:6px;
+    text-decoration:underline;
+}
